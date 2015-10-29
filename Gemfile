@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby "2.2.2"
 
+gem 'redcarpet', '~>3.3'
+gem 'coderay', '~> 1.1'
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
