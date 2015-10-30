@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
   resources :comments
   resources :posts do
     resources :comments, only: [:create]

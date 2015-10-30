@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby "2.2.2"
 
 gem 'redcarpet', '~>3.3'
+
 gem 'coderay', '~> 1.1'
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -11,6 +12,7 @@ gem 'rails', '4.2.3'
 gem 'pg', '~> 0.18.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'bootstrap-sass', '~> 3.3.5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
