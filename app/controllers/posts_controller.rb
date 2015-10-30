@@ -79,6 +79,10 @@ class PostsController < ApplicationController
         if Rails.env.development?
           name == 'admin' && password == 'magic'
         end
+        puts name
+        puts password
+        puts ENV['LOGIN_NAME']
+        puts ENV['LOGIN_PASS']
       end
     end
 end
