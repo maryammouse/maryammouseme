@@ -75,14 +75,11 @@ class PostsController < ApplicationController
 
     def authenticate
       authenticate_or_request_with_http_basic do |name, password|
-        name == ENV['LOGIN_NAME'] && password == ENV['LOGIN_PASS']
         if Rails.env.development?
-          name == 'admin' && password == 'magic'
+          ENV['LOGIN_NAME'] = 'admin'
+          ENV['LOGIN_PASS'] = 'magic'
         end
-        puts name
-        puts password
-        puts ENV['LOGIN_NAME']
-        puts ENV['LOGIN_PASS']
+        name == ENV['LOGIN_NAME'] && password == ENV['LOGIN_PASS']
       end
     end
 end
