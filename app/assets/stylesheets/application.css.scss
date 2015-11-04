@@ -12,6 +12,8 @@
  *
  */
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -63,7 +65,7 @@ p {
 }
 
 a {
-  color: #42dca3;
+  color: #6666CC;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -72,7 +74,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: #ffcc99;
 }
 
 .light {
@@ -283,7 +285,7 @@ a:focus {
   width: 100%;
   padding: 50px 0;
   color: #fff;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+  background: image-url("art.jpg") no-repeat center center scroll;
   background-color: #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -323,17 +325,17 @@ a:focus {
 }
 
 .btn-default {
-  border: 1px solid #42dca3;
-  color: #42dca3;
+  border: 1px solid #6666CC;
+  color: #6666CC;
   background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #42dca3;
+  border: 1px solid #ffcc99;
   outline: 0;
   color: #000;
-  background-color: #42dca3;
+  background-color: #ffcc99;
 }
 
 ul.banner-social-buttons {

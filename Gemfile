@@ -5,7 +5,11 @@ ruby "2.2.2"
 gem 'redcarpet', '~>3.3'
 
 gem 'coderay', '~> 1.1'
+
 gem 'rails_12factor', group: :production
+
+gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 4.4.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgres as the database for Active Record

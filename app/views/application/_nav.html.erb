@@ -2,12 +2,12 @@
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-        <i class="fa fa-bars"></i>
+        <%= fa_icon "bars" %>
       </button>
       <a class="navbar-brand page-scroll" href="
       <%= raw '#page-top' if request.path == '/'  %>
       <%= raw '/' if request.path != '/'  %> ">
-        <i class="fa fa-play-circle"></i>  <span class="light">maryammouse</span>.me
+        <%= icon 'rocket'%> <span class="light">Maryam</span>Syed
       </a>
     </div>
 
