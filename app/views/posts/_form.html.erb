@@ -1,3 +1,26 @@
+<style>
+
+    textarea {
+        border: none !important;
+        overflow: auto !important;
+        outline: none !important;
+
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    input {
+        border: none !important;
+        overflow: auto !important;
+        outline: none !important;
+
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+</style>
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -11,15 +34,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="field form-inline">
+    <p>
+    <%= f.text_field :title, class: 'input input-lg', placeholder: "This is where I will write my title", style: "border: none; width: 100%;  font-family: Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif; font-weight: bold; font-size: 25pt;" %>
+    </p>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <p>
+    <%= f.text_area :body, class: 'form-control', style: 'height: 600px; border: none; font-size: 15pt;', placeholder: 'Total ripoff of Medium, but who cares? ' %>
+    </p>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit :SubmitPost, class: 'btn btn-default', data: { confirm: "Are you sure you're ready to post?" } %>
   </div>
 <% end %>
