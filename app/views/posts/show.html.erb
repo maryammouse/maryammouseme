@@ -1,20 +1,31 @@
+<style>
+    body {background: #fff; color: #000;}
+</style>
 <p id="notice"><%= notice %></p>
 
-<h2><%= link_to_unless_current @post.title, @post %></h2>
+
+<div align="center">
+  <div class="container" style="width: 60%; padding-top: 50px; text-align: left;">
+<div align="center"><h2><%= link_to_unless_current @post.title, @post %></h2></div>
 <%= markdown(@post.body) %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back to Blog Index', posts_path %>
 
-<h2>Comments</h2>
+    <p>
+    <h2>Comments</h2>
+    <hr>
 <div id="comments">
   <%= render :partial => @post.comments %>
 </div>
 
-<%= form_for [@post, Comment.new] do |f| %>
+    <hr>
     <p>
-      <%= f.label :body, "New comment" %><br/>
-      <%= f.text_area :body %>
+    <h3>New Comment</h3>
+<%= form_for [@post, Comment.new] do |f| %>
+      <%= f.label :header, "Name" %>
+      <%= f.text_field :owner, class: 'form' %><br><br>
+      <%= f.text_area :body, class: 'form-control', style: "height: 100px;" %>
     </p>
     <p><%= f.submit "Add comment" %></p>
 <% end %>
+</p>

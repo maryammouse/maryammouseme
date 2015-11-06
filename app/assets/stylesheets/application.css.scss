@@ -12,7 +12,6 @@
  *
  */
 
-@import "font-awesome-sprockets";
 @import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -370,14 +369,14 @@ footer p {
 
 ::-moz-selection {
   text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255,255,255,.2);
+  background: #purple;
+  background: rgba(193 ,193,240,.2);
 }
 
 ::selection {
   text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255,255,255,.2);
+  background: #purple;
+  background: rgba(193,193,240,.2);
 }
 
 img::selection {
@@ -389,6 +388,6 @@ img::-moz-selection {
 }
 
 body {
-  webkit-tap-highlight-color: rgba(255,255,255,.2);
+  webkit-tap-highlight-color: rgba(193,193,240,.2);
 }
 

@@ -1,9 +1,13 @@
-<%= div_for comment do %>
+<%= div_for comment, class: 'panel panel-default' do %>
+    <div class="panel-heading">Posted by: <%= comment.owner %></div>
+    <div style="float: right; padding-right: 10px;">
+      <i>
+        <%= time_ago_in_words(comment.created_at) %> ago
+      </i>
+      </div>
     <p>
-      <strong>
-        Posted <%= time_ago_in_words(comment.created_at) %> ago
-      </strong>
-      <br/>
+      <div style="padding-top: 20px; padding-left: 20px; padding-right: 20px; padding-bottom: 10px;">
       <%= simple_format comment.body %>
+          </div>
     </p>
 <% end %>
