@@ -6,7 +6,11 @@
 
 <div align="center">
   <div class="container" style="width: 60%; padding-top: 50px; text-align: left;">
-<div align="center"><h2><%= link_to_unless_current @post.title, @post %></h2></div>
+<div align="center"><h2><%= link_to_unless_current @post.title, @post %></h2>
+      <%= @post.created_at.in_time_zone('US/Pacific').strftime("%A %d %b %Y") %>
+      (<%= time_ago_in_words(@post.created_at) %> ago)
+  </div>
+    <br><br>
 <%= markdown(@post.body) %>
 
 <%= link_to 'Back to Blog Index', posts_path %>
