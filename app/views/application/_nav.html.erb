@@ -19,10 +19,14 @@
           <a href="#page-top"></a>
         </li>
         <li>
-          <a class="page-scroll" href="#about">About</a>
+          <a class="page-scroll" href="
+          <%= raw '#about' if request.path == '/'  %>
+          <%= raw '/#about' if request.path != '/'  %>">About</a>
         </li>
         <li>
-          <a class="page-scroll" href="#contact">Contact</a>
+          <a class="page-scroll" href="
+          <%= raw '#contact' if request.path == '/'  %>
+          <%= raw '/#contact' if request.path != '/'  %>">Contact</a>
         </li>
         <li>
           <a class="page-scroll" href="/posts">Blog</a>
