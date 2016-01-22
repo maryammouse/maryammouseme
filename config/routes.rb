@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'welcome#index'
+  get 'resume' => 'welcome#resume'
   resources :comments
   resources :posts do
     resources :comments, only: [:create]
