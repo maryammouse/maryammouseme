@@ -1,5 +1,7 @@
-
 <h2><%= link_to_unless_current post.title, post %></h2>
+<%= post.created_at.in_time_zone('US/Pacific').strftime("%A %d %b %Y") %>
+(<%= time_ago_in_words(post.created_at) %> ago)
+<p>
 <div>
 <%=  markdown(post.body) %>
     </div>
