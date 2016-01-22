@@ -6,6 +6,11 @@ gem 'redcarpet', '~>3.3'
 
 gem 'coderay', '~> 1.1'
 
+gem 'dotenv-rails', '~> 2.0', '>= 2.0.2' # adds environment variables from .env into ENV. Do not commit .env !
+
+gem "recaptcha", require: "recaptcha/rails"
+# recaptcha to block spam
+
 gem 'rails_12factor', group: :production
 
 gem "font-awesome-rails"

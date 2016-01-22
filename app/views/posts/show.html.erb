@@ -29,6 +29,7 @@
       <%= f.label :header, "Name" %>
       <%= f.text_field :owner, class: 'form' %><br><br>
       <%= f.text_area :body, class: 'form-control', style: "height: 100px;" %>
+        <%= recaptcha_tags %>
     </p>
     <p><%= f.submit "Add comment" %></p>
 <% end %>
